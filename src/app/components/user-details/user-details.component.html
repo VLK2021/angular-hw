@@ -1,0 +1,22 @@
+<p>user-details works!</p>
+<ul>
+  <li>{{userDetailsObj.id}}</li>
+  <li>{{userDetailsObj.name}}</li>
+  <li>{{userDetailsObj.email}}</li>
+  <li>{{userDetailsObj.username}}
+
+    <ul>Address:
+      <li>{{userDetailsObj.address.street}}</li>
+      <li>{{userDetailsObj.address.city}}</li>
+      <li>{{userDetailsObj.address.suite}}</li>
+      <li>{{userDetailsObj.address.zipcode}}
+
+        <ul>Geo:
+          <li>{{userDetailsObj.address.geo.lng}}</li>
+          <li>{{userDetailsObj.address.geo.lat}}</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+<!--<p>{{userDetailsObj | json}}</p>-->
