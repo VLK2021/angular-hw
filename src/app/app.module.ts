@@ -11,6 +11,9 @@ import {HomeComponent} from './components/home/home.component';
 import {PostsComponent} from './components/posts/posts.component';
 import {PostComponent} from './components/post/post.component';
 import {PostDetailsComponent} from './components/post-details/post-details.component';
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { CommentDetailsComponent } from './components/comment-details/comment-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import {PostDetailsComponent} from './components/post-details/post-details.compo
     HomeComponent,
     PostsComponent,
     PostComponent,
-    PostDetailsComponent
+    PostDetailsComponent,
+    CommentsComponent,
+    CommentComponent,
+    CommentDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +45,12 @@ import {PostDetailsComponent} from './components/post-details/post-details.compo
         path: 'posts-page', component: PostsComponent,
         children:
           [{path: 'post-details/:id', component: PostDetailsComponent}]
+      },
+
+      {
+        path: 'comments-page', component: CommentsComponent,
+        children:
+        [{path: 'comment-details/:id', component: CommentDetailsComponent}]
       }
 
     ])
