@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', component: LeyoutComponent, children:[
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: 'home', component:HomeComponent},
-      {path: 'users', loadChildren: () => import('./modules').then(value => value.UsersModule)},
+      // {path: 'users', loadChildren: () => import('./modules').then(value => value.UsersModule)},
     ]}
 ];
 
