@@ -1,0 +1,66 @@
+.container {
+  width: 70%;
+}
+
+.block-title {
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 80%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-first {
+  width: 20%;
+  color: lightgrey;
+}
+
+.title-firs-w {
+  width: 20%;
+  color: green;
+}
+
+
+.title-second {
+  width: 80%;
+  text-align: start;
+}
+
+.current {
+  width: 20%;
+  text-align: end;
+  font-weight: bold;
+  padding: 0 2rem 0 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.visible {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  box-sizing: border-box;
+  color: green;
+  border-top: 3px solid green;
+}
+
+.text {
+  padding-left: 11rem;
+  box-sizing: border-box;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
