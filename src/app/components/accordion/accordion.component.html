@@ -2,6 +2,7 @@
   <div>
     <div *ngFor="let obj of accordionArr">
       <div class="block-title">
+
         <div [ngClass]="{'visible': isAccordionVisible(obj.id), 'title': !isAccordionVisible(obj.id)}">
           <p class="{{ visibleAccordionId && isAccordionVisible(obj.id) ? 'title-firs-w' : 'title-first' }}">
             {{ obj.id < 10 ? '0' + obj.id : obj.id }}
