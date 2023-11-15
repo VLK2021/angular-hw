@@ -1,4 +1,30 @@
-<div>Hello</div>
+<div class="wrap">
+
+  <div class="wrap-first">
+    <div class="wrap-first-friendsList">
+      <app-friends-list [changeShowAddFriends]="changeShowAddFriends"
+                        [showAddFriend]="showAddFriend"
+                        [friends]="friends"
+      ></app-friends-list>
+    </div>
+
+    <div *ngIf="showAddFriend" class="wrap-first-addFriend">
+      <app-add-friend [addFriend]="addFriend"></app-add-friend>
+    </div>
+
+    <div class="wrap-first-btn">
+      <button (click)="changeShowAddFriends()">
+        {{showAddFriend ? "Close" : "Add friend"}}
+      </button>
+    </div>
+  </div>
+
+
+  <div class="wrap-second">
+
+  </div>
+
+</div>
 
 
 

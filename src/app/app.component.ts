@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import {IFriend} from "../interfaces/IFriend";
+import {InitialFriends} from "../constants/initialFriends";
+
 
 @Component({
   selector: 'app-root',
@@ -9,5 +12,16 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  title = 'angular-hw';
+  showAddFriend: boolean = false;
+  friends: IFriend[] = InitialFriends || [];
+
+
+  changeShowAddFriends() {
+    this.showAddFriend = !this.showAddFriend;
+  }
+
+  addFriend(friend: any): void {
+    this.friends = [...this.friends, friend];
+  }
+
 }

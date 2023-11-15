@@ -1,0 +1,25 @@
+<div class="friend">
+  <div class="friend-img">
+    <img [src]=friend.image [alt]=friend.name>
+  </div>
+
+  <div class="friend-block-info">
+    <h3>{{friend.name}}</h3>
+
+    <p *ngIf="friend.balance < 0" class="red">
+    You owe {{friend.name}} {{friend.balance}}€
+    </p>
+
+    <p *ngIf="friend.balance > 0" class="green">
+      {{friend.name}} owes you {{friend.balance}}€
+    </p>
+
+
+        <p *ngIf="friend.balance === 0">You and {{friend.name}} are even</p>
+  </div>
+
+  <button (click)="changeShowAddFriends()">
+    {{'Select'}}
+  </button>
+</div>
+
