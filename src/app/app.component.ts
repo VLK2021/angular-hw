@@ -13,14 +13,19 @@ import {InitialFriends} from "../constants/initialFriends";
 
 export class AppComponent {
   showAddFriend: boolean = false;
-  friends: IFriend[] = InitialFriends || [];
+  friends: IFriend[];
+
+
+  ngOnInit(): void {
+    this.friends = InitialFriends;
+  }
 
 
   changeShowAddFriends() {
     this.showAddFriend = !this.showAddFriend;
   }
 
-  addFriend(friend: any): void {
+  addFriend = (friend: IFriend): void => {
     this.friends = [...this.friends, friend];
   }
 

@@ -48,7 +48,6 @@ export class AddFriendComponent implements OnInit {
       name: '',
       image: 'https://i.pravatar.cc/48'
     });
-
   }
 
 
