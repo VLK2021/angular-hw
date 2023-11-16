@@ -1,32 +1,4 @@
-<div class="wrap">
-
-  <div class="wrap-first">
-    <div class="wrap-first-friendsList">
-      <app-friends-list [setSelectedFriend]="setSelectedFriend"
-                        [selectedFriend]="selectedFriend"
-                        [friends]="friends"
-      ></app-friends-list>
-    </div>
-
-    <div *ngIf="showAddFriend" class="wrap-first-addFriend">
-      <app-add-friend [addFriend]="addFriend"></app-add-friend>
-    </div>
-
-    <div class="wrap-first-btn">
-      <button (click)="changeShowAddFriends()">
-        {{showAddFriend ? "Close" : "Add friend"}}
-      </button>
-    </div>
-  </div>
-
-
-  <div *ngIf="selectedFriend" class="wrap-second">
-    <app-split-bill [splitBill]="splitBill"
-                    [selectedFriend]="selectedFriend"
-    ></app-split-bill>
-  </div>
-
-</div>
+<p>Hello</p>
 
 
 
