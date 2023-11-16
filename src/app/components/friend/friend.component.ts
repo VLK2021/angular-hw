@@ -19,9 +19,7 @@ export class FriendComponent implements OnInit {
 
   isSelected: boolean;
 
-  constructor() {
-
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.changeIsSelected();
@@ -38,6 +36,5 @@ export class FriendComponent implements OnInit {
       ? this.selectedFriend.id === this.friend.id
       : false;
   }
-
 
 }
