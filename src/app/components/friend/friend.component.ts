@@ -20,10 +20,11 @@ export class FriendComponent implements OnInit {
   isSelected: boolean;
 
   constructor() {
-    this.changeIsSelected();
+
   }
 
   ngOnInit(): void {
+    this.changeIsSelected();
   }
 
   ngOnChanges(changes: SimpleChanges): void {

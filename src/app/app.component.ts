@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 import {IFriend} from "../interfaces/IFriend";
 import {InitialFriends} from "../constants/initialFriends";
@@ -13,16 +13,13 @@ import {InitialFriends} from "../constants/initialFriends";
 
 export class AppComponent {
   showAddFriend: boolean = false;
-  showSplitBill: boolean = false;
   selectedFriend: any;
 
   friends: IFriend[];
 
-
   ngOnInit(): void {
     this.friends = InitialFriends;
   }
-
 
   changeShowAddFriends() {
     this.showAddFriend = !this.showAddFriend;
@@ -33,17 +30,15 @@ export class AppComponent {
   };
 
   splitBill = (value: any) => {
-    this.friends = this.friends.map(obj => obj.id === this.selectedFriend.id ? {...obj, balance: obj.balance + value} : obj);
+    this.friends = this.friends.map(obj => obj.id === this.selectedFriend.id ? {
+      ...obj,
+      balance: obj.balance + value
+    } : obj);
     this.selectedFriend = null;
   };
 
   setSelectedFriend = (friend: IFriend) => {
     this.selectedFriend = friend;
-    this.showSplitBill = !this.showSplitBill;
-
-
   }
-
-
 
 }

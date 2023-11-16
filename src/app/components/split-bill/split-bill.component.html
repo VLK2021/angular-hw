@@ -1,1 +1,33 @@
-<p>split-bill works!</p>
+<div class="split-bill">
+  <form class="form-split-bill" (ngSubmit)="onSplitBill()">
+    <h2>Split a bill with {{ selectedFriend.name }}</h2>
+
+    <div>
+      <label>💰 Bill value</label>
+      <input type="number" [(ngModel)]="currentBill" name="bill" required/>
+    </div>
+
+    <div>
+      <label>🧍‍♀️ Your expense</label>
+      <input type="number" [(ngModel)]="paidByUser" name="paidByUser" required/>
+    </div>
+
+    <div>
+      <label>👫 {{ selectedFriend.name }}'s expense</label>
+      <input type="text" disabled [value]="paidByFriend"/>
+    </div>
+
+    <div>
+      <label>🤑 Who is paying the bill</label>
+      <select [(ngModel)]="whoIsPaying" name="whoIsPaying" required>
+        <option value="user">You</option>
+        <option value="friend">{{ selectedFriend.name }}</option>
+      </select>
+    </div>
+
+    <div class='btn'>
+      <button type="submit">Split bill</button>
+    </div>
+  </form>
+</div>
+
