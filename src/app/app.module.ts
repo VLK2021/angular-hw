@@ -7,6 +7,7 @@ import { FriendsListComponent } from './components/friends-list/friends-list.com
 import { FriendComponent } from './components/friend/friend.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SplitBillComponent } from './components/split-bill/split-bill.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     FriendsListComponent,
     FriendComponent,
     AddFriendComponent,
+    SplitBillComponent,
   ],
   imports: [
     BrowserModule,

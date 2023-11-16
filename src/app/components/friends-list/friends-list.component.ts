@@ -14,9 +14,9 @@ export class FriendsListComponent implements OnInit {
   @Input()
   friends: IFriend[];
   @Input()
-  changeShowAddFriends: () => void;
+  setSelectedFriend: (friend: IFriend) => void;
   @Input()
-  showAddFriend: boolean;
+  selectedFriend: IFriend;
 
 
   constructor() { }

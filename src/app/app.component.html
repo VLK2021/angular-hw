@@ -2,9 +2,9 @@
 
   <div class="wrap-first">
     <div class="wrap-first-friendsList">
-      <app-friends-list [changeShowAddFriends]="changeShowAddFriends"
-                        [showAddFriend]="showAddFriend"
+      <app-friends-list [setSelectedFriend]="setSelectedFriend"
                         [friends]="friends"
+                        [selectedFriend]="selectedFriend"
       ></app-friends-list>
     </div>
 
@@ -20,8 +20,8 @@
   </div>
 
 
-  <div class="wrap-second">
-
+  <div *ngIf="showSplitBill" class="wrap-second">
+    <app-split-bill [splitBill]="splitBill"></app-split-bill>
   </div>
 
 </div>

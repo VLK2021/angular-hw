@@ -33,7 +33,7 @@ export class AddFriendComponent implements OnInit {
     if (this.friendForm.invalid) return;
     const id = this.generateRandomId();
 
-    const { name, image } = this.friendForm.value;
+    const {name, image} = this.friendForm.value;
 
     const newFriend = {
       id,
@@ -49,6 +49,5 @@ export class AddFriendComponent implements OnInit {
       image: 'https://i.pravatar.cc/48'
     });
   }
-
 
 }

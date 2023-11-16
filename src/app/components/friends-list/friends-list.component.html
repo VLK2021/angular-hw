@@ -1,6 +1,6 @@
 <div class="first-friendsList">
   <app-friend *ngFor="let friend of friends" [friend]="friend"
-              [changeShowAddFriends]="changeShowAddFriends"
-              [showAddFriend]="showAddFriend"
+              [setSelectedFriend]="setSelectedFriend"
+              [selectedFriend]="selectedFriend"
   ></app-friend>
 </div>

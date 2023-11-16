@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
 import {IFriend} from "../../../interfaces/IFriend";
 
 
@@ -13,17 +13,30 @@ export class FriendComponent implements OnInit {
   @Input()
   friend: IFriend
   @Input()
-  changeShowAddFriends: () => void;
+  setSelectedFriend: (friend: IFriend) => void;
   @Input()
-  showAddFriend: boolean;
+  selectedFriend: IFriend;
 
+  isSelected: boolean;
 
-
-  constructor() { }
+  constructor() {
+    this.changeIsSelected();
+  }
 
   ngOnInit(): void {
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['selectedFriend'] || changes['friend']) {
+      this.changeIsSelected();
+    }
+  }
+
+  changeIsSelected(): void {
+    this.isSelected = this.selectedFriend && this.friend
+      ? this.selectedFriend.id === this.friend.id
+      : false;
+  }
 
 
 }

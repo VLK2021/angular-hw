@@ -13,6 +13,9 @@ import {InitialFriends} from "../constants/initialFriends";
 
 export class AppComponent {
   showAddFriend: boolean = false;
+  showSplitBill: boolean = false;
+  selectedFriend: any;
+
   friends: IFriend[];
 
 
@@ -23,10 +26,24 @@ export class AppComponent {
 
   changeShowAddFriends() {
     this.showAddFriend = !this.showAddFriend;
-  }
+  };
 
   addFriend = (friend: IFriend): void => {
     this.friends = [...this.friends, friend];
+  };
+
+  splitBill = (value: any) => {
+    this.friends = this.friends.map(obj => obj.id === this.selectedFriend.id ? {...obj, balance: obj.balance + value} : obj);
+    this.selectedFriend = null;
+  };
+
+  setSelectedFriend = (friend: IFriend) => {
+    this.selectedFriend = friend;
+    this.showSplitBill = !this.showSplitBill;
+
+
   }
+
+
 
 }

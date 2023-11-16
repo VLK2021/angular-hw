@@ -7,7 +7,7 @@
     <h3>{{friend.name}}</h3>
 
     <p *ngIf="friend.balance < 0" class="red">
-    You owe {{friend.name}} {{friend.balance}}€
+      You owe {{friend.name}} {{friend.balance}}€
     </p>
 
     <p *ngIf="friend.balance > 0" class="green">
@@ -15,11 +15,11 @@
     </p>
 
 
-        <p *ngIf="friend.balance === 0">You and {{friend.name}} are even</p>
+    <p *ngIf="friend.balance === 0">You and {{friend.name}} are even</p>
   </div>
 
-  <button (click)="changeShowAddFriends()">
-    {{'Select'}}
+  <button (click)="setSelectedFriend(friend)">
+    {{isSelected ? "Close" : "Select"}}
   </button>
 </div>
 
