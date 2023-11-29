@@ -1,0 +1,20 @@
+<div class="container">
+  <input type="number" [(ngModel)]="amount" (ngModelChange)="givResult()">
+
+  <select [(ngModel)]="fromCur"  (ngModelChange)="givResult()">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="CAD">CAD</option>
+    <option value="INR">INR</option>
+  </select>
+
+  <select [(ngModel)]="toCur"  (ngModelChange)="givResult()">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="CAD">CAD</option>
+    <option value="INR">INR</option>
+  </select>
+
+  <p>{{converted}} {{toCur}}</p>
+
+</div>
