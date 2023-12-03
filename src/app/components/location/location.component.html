@@ -1,0 +1,19 @@
+<main class="container">
+  <div>
+    <button (click)="handleClick()">Get my location</button>
+  </div>
+
+  <p *ngIf="lat > 0 && lng > 0">
+    Your GPS position
+    <a
+      [href]="getMapLink()"
+      target="_blank"
+      rel="noreferrer"
+    >
+      {{ lat }}, {{ lng }}
+    </a>
+  </p>
+
+  <p>You requested position {{countClick}} times</p>
+
+</main>
